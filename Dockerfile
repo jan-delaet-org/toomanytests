@@ -1,4 +1,4 @@
-FROM python:3.11.6-alpine3.18 AS build
+FROM python:3.12.1-alpine3.18 AS build
 
 RUN apk update && apk upgrade
 RUN addgroup --gid 1001 app \
@@ -11,7 +11,7 @@ RUN python -m venv .venv
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 RUN rm -rf requirements.txt
 
-FROM python:3.11.6-alpine3.18
+FROM python:3.12.1-alpine3.18
 
 RUN apk update && apk upgrade
 RUN addgroup --gid 1001 app \
