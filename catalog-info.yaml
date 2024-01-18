@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "toomanytests"
+  annotations:
+    github.com/project-slug: jan-delaet-org/toomanytests
+    backstage.io/kubernetes-id: "toomanytests"
+    backstage.io/kubernetes-namespace: "toomanytests"
+    backstage.io/kubernetes-cluster: aks-pe-poc-01
+    azure.com/tag-selector: backstage-entity-id/toomanytests
+spec:
+  type: service
+  owner: group:cloud-native
+  lifecycle: experimental
